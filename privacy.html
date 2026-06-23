@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidade do Finance App - Conformidade com LGPD">
+    <title>Política de Privacidade - Finance App</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #6366f1;
+        }
+        .header h1 {
+            color: #6366f1;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            color: #888;
+            font-size: 16px;
+        }
+        .header .updated {
+            color: #999;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        h2 {
+            color: #6366f1;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        h3 {
+            color: #444;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .highlight {
+            background: #eef;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+            margin: 15px 0;
+        }
+        .contact-box {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact-box h3 {
+            color: #6366f1;
+            margin-bottom: 10px;
+        }
+        a { color: #6366f1; }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #6366f1;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            background: #5558e0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>🔒 Política de Privacidade</h1>
+                <p class="subtitle">Finance App - Gestão Financeira Pessoal</p>
+                <p class="updated">Última atualização: 22 de junho de 2024</p>
+            </div>
+
+            <h2>1. Introdução</h2>
+            <p>A Finance App ("nós", "nosso" ou "aplicativo") está comprometida em proteger sua privacidade. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais ao utilizar nosso aplicativo.</p>
+            <p>Esta política está em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</strong> e outras legislações aplicáveis.</p>
+
+            <h2>2. Dados que Coletamos</h2>
+            <h3>2.1 Dados de Cadastro</h3>
+            <ul>
+                <li>Nome e e-mail (para criação de conta)</li>
+                <li>Senha criptografada (nunca armazenamos em texto plano)</li>
+            </ul>
+
+            <h3>2.2 Dados Financeiros</h3>
+            <ul>
+                <li>Transações (receitas e despesas)</li>
+                <li>Categorias personalizadas</li>
+                <li>Metas financeiras</li>
+                <li>Contas a pagar</li>
+                <li>Notificações configuradas</li>
+            </ul>
+
+            <h3>2.3 Dados de Uso</h3>
+            <ul>
+                <li>Informações sobre como você utiliza o aplicativo</li>
+                <li>Preferências de configuração</li>
+                <li>Dados de streak e check-ins diários</li>
+            </ul>
+
+            <h2>3. Como Usamos Seus Dados</h2>
+            <p>Utilizamos seus dados para:</p>
+            <ul>
+                <li>Fornecer e manter o funcionamento do aplicativo</li>
+                <li>Processar e categorizar transações financeiras</li>
+                <li>Gerar relatórios e análises de suas finanças</li>
+                <li>Enviar notificações sobre contas a pagar e metas</li>
+                <li>Melhorar nossos serviços e recursos de IA</li>
+                <li>Prevenir fraudes e garantir a segurança</li>
+            </ul>
+
+            <h2>4. Armazenamento e Segurança</h2>
+            <div class="highlight">
+                <p><strong>Segurança dos Dados:</strong></p>
+                <ul>
+                    <li>✅ Tokens de autenticação armazenados de forma segura (SecureStore)</li>
+                    <li>✅ Senhas criptografadas com bcrypt</li>
+                    <li>✅ Backups criptografados com AES-GCM 256-bit</li>
+                    <li>✅ Comunicação HTTPS/TLS com o servidor</li>
+                    <li>✅ Banco de dados protegido em nuvem AWS</li>
+                </ul>
+            </div>
+
+            <h2>5. Compartilhamento de Dados</h2>
+            <p><strong>Não vendemos seus dados.</strong> Podemos compartilhar informações apenas:</p>
+            <ul>
+                <li>Com prestadores de serviço que nos auxiliam (ex: AWS para hospedagem)</li>
+                <li>Para cumprir obrigações legais ou ordens judiciais</li>
+                <li>Com seu consentimento explícito</li>
+            </ul>
+
+            <h2>6. Seus Direitos (LGPD)</h2>
+            <p>De acordo com a LGPD, você tem os seguintes direitos:</p>
+            <ul>
+                <li><strong>Acesso:</strong> Solicitar cópia dos seus dados</li>
+                <li><strong>Correção:</strong> Retificar dados incompletos ou desatualizados</li>
+                <li><strong>Exclusão:</strong> Solicitar a eliminação dos seus dados</li>
+                <li><strong>Portabilidade:</strong> Exportar seus dados em formato legível</li>
+                <li><strong>Revogação:</strong> Retirar seu consentimento a qualquer momento</li>
+                <li><strong>Oposição:</strong> Discordar do processamento de dados</li>
+            </ul>
+
+            <h2>7. Retenção de Dados</h2>
+            <p>Mantemos seus dados enquanto sua conta estiver ativa. Após a exclusão da conta:</p>
+            <ul>
+                <li>Dados pessoais: excluídos em até 30 dias</li>
+                <li>Dados anonimizados: podem ser mantidos para estatísticas</li>
+                <li>Backups: removidos conforme ciclos de retenção</li>
+            </ul>
+
+            <h2>8. Transferência Internacional</h2>
+            <p>Seus dados são armazenados em servidores AWS localizados no Brasil. Caso ocorra qualquer transferência internacional, garantimos que países destinatários possuam legislação adequada de proteção de dados ou firmamos contratos específicos de proteção.</p>
+
+            <h2>9. Uso de IA e Processamento</h2>
+            <p>Nosso aplicativo utiliza inteligência artificial (Gemini/OpenAI) para:</p>
+            <ul>
+                <li>Categorizar transações automaticamente</li>
+                <li>Extrair dados de documentos e comprovantes</li>
+                <li>Gerar previsões financeiras</li>
+            </ul>
+            <p><strong>Dados sensíveis são processados localmente no dispositivo</strong> quando possível. Dados enviados para APIs de IA não são armazenados por terceiros para treinamento.</p>
+
+            <h2>10. Alterações nesta Política</h2>
+            <p>Podemos atualizar esta política periodicamente. Notificaremos sobre mudanças significativas através do aplicativo ou e-mail. A data da última atualização estará sempre no topo desta página.</p>
+
+            <h2>11. Contato</h2>
+            <div class="contact-box">
+                <h3>📧 DPO - Encarregado de Dados</h3>
+                <p><strong>E-mail:</strong> <a href="mailto:dpo@finance-app.com">dpo@finance-app.com</a></p>
+                <p><strong>Suporte:</strong> <a href="mailto:suporte@finance-app.com">suporte@finance-app.com</a></p>
+                <p><strong>Endereço:</strong> Rua Example, 123 - São Paulo, SP - Brasil</p>
+            </div>
+
+            <footer>
+                <p>Finance App © 2024 - Todos os direitos reservados</p>
+                <p>Conformidade LGPD • Segurança e Privacidade</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
