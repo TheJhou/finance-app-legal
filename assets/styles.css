@@ -1,0 +1,213 @@
+/* Identidade visual do app Kilun (lib/theme.ts): escuro por padrão, claro automático */
+:root {
+  --bg: #0f0d1b;
+  --surface: #1a1730;
+  --surface-2: #231f3d;
+  --border: #2d2950;
+  --primary: #a78bfa;
+  --primary-strong: #7c3aed;
+  --text: #f1f0f5;
+  --text-2: #9d99b3;
+  --text-3: #6b6588;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --radius: 14px;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f3f4f6;
+    --surface: #ffffff;
+    --surface-2: #f9fafb;
+    --border: #e5e7eb;
+    --primary: #6366f1;
+    --primary-strong: #4f46e5;
+    --text: #111827;
+    --text-2: #4b5563;
+    --text-3: #9ca3af;
+    --success: #059669;
+    --warning: #b45309;
+    --danger: #dc2626;
+    color-scheme: light;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--primary); text-underline-offset: 3px; }
+a:hover { color: var(--primary-strong); }
+
+/* ── Cabeçalho ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+}
+.brand img { width: 32px; height: 32px; border-radius: 9px; }
+.site-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.site-nav a {
+  color: var(--text-2);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.site-nav a:hover { background: var(--surface); color: var(--text); }
+.site-nav a[aria-current="page"] { background: var(--surface-2); color: var(--primary); }
+
+/* ── Conteúdo ── */
+main { max-width: 880px; margin: 0 auto; padding: 32px 16px 64px; }
+
+.doc-header { margin-bottom: 28px; }
+.doc-header h1 { font-size: clamp(28px, 5vw, 36px); line-height: 1.2; font-weight: 800; }
+.doc-header .lead { color: var(--text-2); margin-top: 10px; font-size: 17px; }
+.meta { color: var(--text-3); font-size: 14px; margin-top: 8px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+}
+
+.toc { margin-bottom: 28px; }
+.toc h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-3); margin: 0 0 10px; border: 0; padding: 0; }
+.toc ol { columns: 2 240px; column-gap: 24px; padding-left: 20px; }
+.toc li { margin-bottom: 4px; font-size: 15px; break-inside: avoid; }
+.toc a { color: var(--text-2); text-decoration: none; }
+.toc a:hover { color: var(--primary); }
+
+section { scroll-margin-top: 80px; }
+h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 40px 0 12px;
+  padding-top: 8px;
+}
+h3 { font-size: 17px; font-weight: 700; margin: 22px 0 8px; }
+p { margin-bottom: 12px; color: var(--text-2); }
+p strong, li strong { color: var(--text); }
+ul, ol { margin: 0 0 14px 22px; color: var(--text-2); }
+li { margin-bottom: 6px; }
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 8px 0 20px;
+}
+.summary .card { padding: 16px 18px; }
+.summary h3 { margin: 0 0 6px; font-size: 15px; }
+.summary p { margin: 0; font-size: 14px; }
+
+.callout {
+  border-left: 4px solid var(--primary);
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.callout.warning { border-left-color: var(--warning); }
+.callout p:last-child, .callout ul:last-child { margin-bottom: 0; }
+
+.table-wrap { overflow-x: auto; margin: 12px 0 18px; border: 1px solid var(--border); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+th { background: var(--surface-2); color: var(--text); font-weight: 700; }
+td { color: var(--text-2); background: var(--surface); }
+tr:last-child td { border-bottom: 0; }
+
+.steps { counter-reset: step; list-style: none; margin-left: 0; }
+.steps li { counter-increment: step; position: relative; padding-left: 40px; margin-bottom: 12px; }
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+}
+
+/* ── Página inicial ── */
+.hero { text-align: center; padding: 24px 0 8px; }
+.hero img { width: 88px; height: 88px; border-radius: 22px; }
+.hero h1 { font-size: clamp(30px, 6vw, 40px); font-weight: 800; margin-top: 16px; }
+.hero p { color: var(--text-2); font-size: 17px; margin: 10px auto 0; max-width: 560px; }
+.doc-links { display: grid; gap: 12px; margin-top: 32px; }
+.doc-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color .15s, transform .15s;
+}
+.doc-link:hover { border-color: var(--primary); transform: translateY(-1px); color: var(--text); }
+.doc-link h2 { margin: 0 0 4px; padding: 0; font-size: 18px; }
+.doc-link p { margin: 0; font-size: 14px; }
+.doc-link .arrow { color: var(--primary); font-size: 22px; font-weight: 700; }
+
+/* ── Rodapé ── */
+.site-footer { border-top: 1px solid var(--border); }
+.site-footer .inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+  color: var(--text-3);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.site-footer a { color: var(--text-2); }
+
+@media (max-width: 560px) {
+  .card { padding: 16px; }
+  h2 { font-size: 20px; }
+}

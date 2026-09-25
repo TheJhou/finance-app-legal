@@ -1,83 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance App - Documentos Legais</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 { color: #6366f1; margin-bottom: 30px; text-align: center; }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 40px;
-        }
-        .link-card {
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #6366f1;
-            transition: transform 0.2s;
-        }
-        .link-card:hover {
-            transform: translateX(5px);
-            background: #eef;
-        }
-        .link-card a {
-            color: #6366f1;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 600;
-        }
-        .link-card p {
-            color: #666;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #999;
-            font-size: 12px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentos do Kilun: Política de Privacidade, Termos de Uso e exclusão de conta.">
+  <title>Kilun · Documentos</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>💼 Finance App</h1>
-        <p style="text-align: center; color: #666;">Documentos legais e informações importantes</p>
-        
-        <div class="links">
-            <div class="link-card">
-                <a href="/privacy.html">🔒 Política de Privacidade</a>
-                <p>Como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD.</p>
-            </div>
-            
-            <div class="link-card">
-                <a href="/terms.html">⚖️ Termos de Uso</a>
-                <p>Regras e condições para utilização do Finance App, incluindo assinaturas e cancelamentos.</p>
-            </div>
-        </div>
-        
-        <footer>
-            <p>Finance App © 2024 - Todos os direitos reservados</p>
-            <p>suporte@finance-app.com | DPO: dpo@finance-app.com</p>
-        </footer>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html"><img src="assets/icon.png" alt="">Kilun</a>
+      <nav class="site-nav" aria-label="Documentos">
+        <a href="privacy.html">Privacidade</a>
+        <a href="terms.html">Termos de Uso</a>
+        <a href="delete-account.html">Excluir conta</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <img src="assets/icon.png" alt="Ícone do Kilun">
+      <h1>Kilun</h1>
+      <p>Controle financeiro pessoal com os dados no seu aparelho, importação automática das notificações do banco e inteligência artificial.</p>
+    </div>
+
+    <div class="doc-links">
+      <a class="card doc-link" href="privacy.html">
+        <div>
+          <h2>Política de Privacidade</h2>
+          <p>Quais dados o app usa, com quem compartilha e como exercer seus direitos pela LGPD.</p>
+        </div>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="card doc-link" href="terms.html">
+        <div>
+          <h2>Termos de Uso</h2>
+          <p>Regras de uso, planos, assinatura pela Google Play e cancelamento.</p>
+        </div>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="card doc-link" href="delete-account.html">
+        <div>
+          <h2>Excluir conta</h2>
+          <p>Como excluir sua conta e quais dados são apagados.</p>
+        </div>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+    </div>
+
+    <p class="meta" style="text-align:center;margin-top:32px">Dúvidas: <a href="mailto:jonathas.duarte78@gmail.com">jonathas.duarte78@gmail.com</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>© 2026 Kilun · Jonathas Alves Duarte</span>
+      <span><a href="privacy.html">Privacidade</a> · <a href="terms.html">Termos de Uso</a> · <a href="delete-account.html">Excluir conta</a></span>
+    </div>
+  </footer>
 </body>
 </html>
